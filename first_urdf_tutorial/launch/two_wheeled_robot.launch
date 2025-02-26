@@ -2,6 +2,7 @@
     <!-- Declare arguments -->
     <arg name="urdf_file" default="$(find first_urdf_tutorial)/urdf/two_wheeled_robot.urdf.xacro"/>
     <arg name="rviz_config_file" default="$(find first_urdf_tutorial)/rviz/robot_car.rviz"/>
+    <rosparam file="$(find first_urdf_tutorial)/config/controllers.yaml" command="load"/>
 
     <!-- Load URDF into robot_description parameter -->
     <param name="robot_description" command="$(find xacro)/xacro $(arg urdf_file)"/>
